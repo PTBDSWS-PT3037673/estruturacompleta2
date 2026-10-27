@@ -1,5 +1,10 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(basedir, '.env'))
+except ImportError:
+    pass
 
 
 class Config:
@@ -21,7 +26,7 @@ class Config:
 
     EMAIL_INSTITUCIONAL = 'moura.rodrigues@aluno.ifsp.edu.br'
     EMAIL_PROFESSOR = 'flaskaulasweb@zohomail.com'
-    PRONTUARIO = 'PT3038211'
+    PRONTUARIO = 'PT3037673'
     NOME_ALUNO = 'Lucas Rodrigues de Moura'
 
     @staticmethod
